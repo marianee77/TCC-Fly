@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vagas Acessíveis</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="icon" href="assets/icon.png" type="image/x-icon">
+    </head>
+
+<body>
+
+    <header>
+
+        <nav>
+            <h2 class="titulo-principal"><a href="index.html">Vagas Acessíveis</a></h2>
+            <ul class="navbar-itens">
+                <li><a href="login.html">Login</a></li>
+                <li><a href="cadastro.html">Cadastre-se</a></li>
+                <li><a href="sobre-Nos.html">Sobre Nós</a></li>
+                <li id="editarEmpresaLink" style="display: none">
+                    <a href="editar-Empresa.html">Editar Empresa</a>
+                </li>
+                <li id="logoutLink" class="navbar-itens">
+                    <button onclick="logout()">Sair</button>
+
+                </li>
+            </ul>
+        </nav>
+         </header>
+
+    <main>
+        <form class="search-bar">
+            <input type="text" id="searchInput" placeholder="Buscar..." />
+            <button type="submit">🔍</button>
+        </form>
+
+        <!--lista de empresas cadastradas -->
+        <div id="empresasList">
+            <!--aqui vão aparecer as empresas cadastradas -->
+        </div>
+
+    </main>
+            <div class="imagem-back"></div> <!--adicionado imagem -->
+    <footer>
+        <h2>Desenvolvido por Grupo 5 - Mulheres in Tech - Turma 17</h2>
+        <h4>2025 &copy; Todos os direitos reservados</h4>
+    </footer>
+    <script src="js/index.js"></script>
+</body>
+</html>

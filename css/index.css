@@ -1,0 +1,252 @@
+/* resetando estilos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+/* Estilo básico da página */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Estilizando o cabeçalho */
+header {
+    background-color: #80269e;
+    padding: 15px 0;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+header .titulo-principal {
+    color: white;
+    font-size: 22px;
+}
+
+header .titulo-principal a {
+    color: white;
+    text-decoration: none;
+}
+
+header .titulo-principal a:hover {
+    text-decoration: none;
+}
+
+  /* Container para centralizar o conteúdo */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ajusta melhor os itens */
+    flex-wrap: wrap; /* Permite que os itens quebrem linha em telas menores */
+    padding: 10px 20px;
+    width: 100%;
+}
+
+  /* Ajuste para lista de navegação */
+.navbar-itens {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Reduzi o espaçamento */
+    flex-wrap: wrap;
+    justify-content: center; /* Alinha os itens ao centro */
+}
+
+
+.navbar-itens a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar-itens a:hover {
+    text-decoration: underline;
+}
+
+#logoutLink button {
+    background: white;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid white;
+    color: #5d2ebc;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+  /* barra de pesquisa */
+  /* Barra de pesquisa */
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #d8d1f0;
+    padding: 10px;
+    border-radius: 40px;
+    width: 30%;
+    margin: 10px auto; /* Garante que ela fique centralizada e abaixo do menu */
+    position: relative; /* Permite posicionamento absoluto do ícone */
+}
+
+  /* Campo de entrada */
+.search-bar input {
+    padding: 10px 40px 10px 10px; /* Adiciona espaço à direita para o ícone */
+    width: 100%;
+    max-width: 300px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    outline: none;
+    background: transparent;
+}
+
+  /* Botão de busca (ícone) */
+.search-bar button {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #5d2ebc;
+    position: absolute; /* Posiciona o ícone absolutamente dentro da .search-bar */
+    right: 15px; /* Distância da borda direita */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajuste fino para centralização vertical */
+}
+
+/* layout principal */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px;
+    gap: 30px;
+}
+
+
+
+/* container das empresas */
+#empresasList {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 100px;
+}
+
+.empresa-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    margin-bottom: 20px;
+  }
+
+.empresa-card h3 {
+    font-size: 18px;
+    color: #5d2ebc;
+    margin-bottom: 10px;
+}
+
+  .empresa-card p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+  /* estilizando o rodapé */
+  footer {
+    background-color: #80269e;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+  }
+
+  footer h2, footer h4 {
+    margin: 5px 0;
+    font-size: 16px;
+  }
+  /* Responsividade para telas menores */
+  @media (max-width: 1024px) {
+    nav {
+      gap: 20px; /* Reduz o espaço entre os itens */
+      flex-wrap: wrap;
+    }
+
+    .search-bar {
+      width: 50%; /* Aumenta a largura da barra de pesquisa */
+      top: 80px;
+    }
+
+    .empresa-card {
+      width: 80%; /* Ajusta os cartões para telas menores */
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      text-align: center;
+      padding: 10px;
+    }
+
+    nav {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .navbar-itens {
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+    }
+
+    .search-bar {
+      width: 80%; /* Deixa a barra de pesquisa maior */
+      margin-top: 10px; /* Mantém distância do menu */
+    }
+
+    main {
+      align-items: center;
+      text-align: center;
+    }
+
+    .empresa-card {
+      width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-bar {
+      width: 90%;
+    }
+
+    .empresa-card {
+      width: 100%;
+    }
+
+    /* imagem na tela*/
+}
+.imagem-back {
+   height: 300px;
+   background:url("../assets/header_img-2048x687.png");
+   background-size: contain;
+   background-position: center;
+   background-repeat: no-repeat;
+}
