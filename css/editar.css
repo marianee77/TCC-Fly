@@ -115,6 +115,19 @@
     background-color: #4b22a0;
   }
 
+  #excluirEmpresaBtn {
+    width: 100%;
+    padding: 10px;
+    background-color: #5d2ebc;
+    margin-top: 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+
   /* Estilizando o rodapé */
   footer {
     background-color: #80269e;
