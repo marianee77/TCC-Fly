@@ -1,0 +1,206 @@
+/* Resetando estilos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Estilo básico da página */
+  body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  /* Estilizando o cabeçalho */
+  header {
+    background-color: #80269e;
+    padding: 15px 0;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* Título "Empresas Acessíveis" */
+  header h2 a {
+    color: white;
+    text-decoration: none;
+  }
+
+  header h2 a:hover {
+    text-decoration: underline;
+  }
+
+  /* Container para centralizar o conteúdo */
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    width: 100%;
+  }
+
+  /* Estilizando a navegação */
+  .navbar-itens {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center; /* Alinha os itens ao centro */
+  }
+
+  .navbar-itens a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+  .navbar-itens a:hover {
+    text-decoration: underline;
+  }
+
+  /* Estilizando o container de cadastro */
+  main {
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  main h2 {
+    margin-bottom: 20px;
+    color: #5d2ebc;
+    text-align: center;
+  }
+
+  main form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  main form input, main form textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  main form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #5d2ebc;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  main form button:hover {
+    background-color: #4b22a0;
+  }
+
+  /* Estilizando o rodapé */
+  footer {
+    background-color: #80269e;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+    width: 100%;
+  }
+
+  footer h2, footer h4 {
+    margin: 5px 0;
+    font-size: 16px;
+  }
+
+  /* Responsividade para telas menores */
+  @media (max-width: 1024px) {
+    nav {
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    main {
+      width: 80%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      text-align: center;
+      padding: 10px;
+    }
+
+    nav {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .navbar-itens {
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+    }
+
+    main {
+      width: 90%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    main {
+      width: 100%;
+    }
+
+    nav {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .navbar-itens {
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+    }
+  }
+ /* imagem na tela*/
+
+ .imagem-back {
+
+  /* Contêiner da imagem de fundo */
+ position: fixed; /* Fixa a imagem de fundo */
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100vh; /* Ocupa 100% da altura da tela */
+ background: url("../assets/business-255.jpg") no-repeat center center;
+ background-size: cover; /* Cobre toda a área disponível */
+ z-index: -1; /* Garante que a imagem fique atrás do conteúdo */
+}
+
+/* Garantir que o conteúdo fique sobre a imagem */
+header, main, footer {
+ position: relative;
+ z-index: 2; /* Garante que o conteúdo fique sobre a imagem de fundo */
+/* Fundo semi-transparente para melhor legibilidade */
+}
